@@ -1,0 +1,82 @@
+@mixin navAppear {
+    @media screen and (max-width: 1208px) {
+        @content;
+    }
+}
+
+@mixin homeItems {
+    @media screen and (max-width: 916px) {
+        @content;
+    }
+}
+
+@mixin aboutItems {
+    @media screen and (max-width: 916px) {
+        @content;
+    }
+}
+
+@mixin servicesItems {
+    @media screen and (max-width: 816px) {
+        @content;
+    }
+}
+
+
+@mixin experienceItems {
+    @media screen and (max-width: 1194px) {
+        @content;
+    }
+}
+
+@mixin testimonialItems {
+    @media screen and (max-width: 1194px) {
+        @content;
+    }
+}
+
+@mixin tabletslider {
+    @media screen and (max-width: 750px) and (min-width: 580px) {
+        @content;
+    }
+}
+
+@mixin mobileSlider {
+    @media screen and (max-width: 580px) and (min-width: 358px) {
+        @content;
+    }
+}
+
+@mixin smallMobileSlider {
+    @media screen and (max-width: 358px) {
+        @content;
+    }
+}
+
+@mixin teamItems {
+    @media screen and (max-width: 1194px) {
+        @content;
+    }
+}
+
+@mixin newsItems {
+    @media screen and (max-width: 1194px) {
+        @content;
+    }
+}
+
+@mixin contactItems {
+    @media screen and (max-width: 1294px) {
+        @content;
+    }
+}
+
+
+@mixin boxWidth {
+    @media screen and (max-width: 378px) {
+        @content;
+    }
+}
+
+
+// 1194px

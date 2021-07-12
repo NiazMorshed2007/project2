@@ -1,0 +1,151 @@
+#testimonial {
+    width: 100%;
+    height: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: $whiteBackground;
+    .testimonial-heading {
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: all .6s ease;
+        text-align: center;
+        h1 {
+            @include header(900, 60px, auto, 20px, 10px);
+            @include testimonialItems {
+                @include header(900, 40px, auto, 20px, 10px);
+            }
+        }
+    }
+        .inner-testimonial {
+           @include flexDisplay(row);
+           flex-wrap: wrap;
+            margin-top: 70px;
+            .video {
+                transform: translateX(-200px);
+                opacity: 0;
+                transition: all .5s ease;
+                width: auto;
+                height: auto;
+                /* background-color: green; */
+                background-color: $whiteBackground;
+                padding-left: 20px;
+                z-index: 10000;
+                @include testimonialItems {
+                    padding-left: 0px;
+                }
+                img {
+                    width: 419px;
+                    height: 313px;
+                    margin-right: 100px;
+                    opacity: .8;
+                    background-color: red;
+                    @include testimonialItems {
+                        margin: auto;
+                    }
+                }
+            }
+
+            .container {
+                margin-top: 40px;
+                width: 750px;
+                @include tabletslider {
+                    width: 600px;
+                }
+                @include mobileSlider {
+                    width: 550px;
+                }
+                overflow: hidden;
+                transform: translateY(200px);
+                opacity: 0;
+                transition: all .5s ease;
+                .slider {
+                    width: 2950px;
+                    height: auto;
+                    .inner-slider {
+                        width: auto;
+                       @include flexDisplay(row);
+                       img {
+                           border-radius: 50%;
+                       }
+                       .slider1 {
+    
+                        width: auto;
+                        height: auto;
+                        padding-left: 20px;
+                       padding-right: 120px;
+                       h3 {
+                           margin-top: 10px;
+                           font-size: auto;
+                           @include smallMobileSlider {
+                               font-size: 15px;
+                           }
+                       }
+                       @include tabletslider {
+                           width: 70%;
+                           height: auto;
+                           margin-right: 150px;
+                           left: 0;
+                       }
+
+                       @include mobileSlider {
+                           width: 15%;
+                           height: auto;
+                           margin-right: 220px;
+                       }
+
+                       @include smallMobileSlider {
+                           width: 13%;
+                           height: auto;
+                           margin-right: 250px;
+                       }
+                    } 
+                    .slider2 {
+                        @extend .slider1;
+                        @include tabletslider {
+                            padding-left: 50px;
+                        }
+                        @include mobileSlider {
+                            padding-left: 10px
+                        }
+                    }
+                    .slider3 {
+                     @extend .slider1;
+                     @include tabletslider {
+                         padding-left: 50px;
+                     }
+                    }
+                    .slider4 {
+                        @extend .slider1;
+                        @include tabletslider {
+                            padding-left: 50px;
+                        }
+                    
+                    } 
+                    }
+                }
+            }
+           
+
+            //smooth appear
+            .video-appear {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+
+            .container-appear {
+            @extend .video-appear;
+            }
+
+        }
+
+    
+
+    // smooth appear
+    .testimonial-headingap {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+
+    
+      
+}

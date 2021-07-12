@@ -1,0 +1,153 @@
+#contact {
+    width: 100%;
+    height: auto;
+    background-color: $whiteBackground;
+    padding-top: 70px;
+    padding-left:70px;
+    @include contactItems {
+        padding-left: 20px;
+    }
+    @include flexDisplay(column);
+    .contact-main {
+        width: 100%;
+        height: auto;
+       @include flexDisplay(row);
+        flex-wrap: wrap;
+        .contact-content {
+            transform: translateY(-200px);
+            opacity: 0;
+            transition: all .5s ease;
+            width: auto;
+            height: auto;
+            margin-right: 100px;
+            @include contactItems {
+                width: 100%;
+                height: auto;
+                margin-bottom: 60px;
+            }
+            h1 {
+                @include header(700, 40px, auto, 10px, 10px);
+                @include contactItems {
+                    @include header(700, 30px, auto, 10px, 10px);
+                }
+            }
+            img {
+                margin-top: 15px;
+                cursor: pointer;
+            }
+            span {
+                cursor: pointer;
+            }
+        }
+
+        .contact-input {
+            width: auto;
+            height: auto;
+            @include contactItems {
+                width: 100%;
+                height: auto;
+                margin-top: 40px;
+            }
+            input {
+                width: 400px;
+                height: 60px;
+                padding: 15px;
+                font-family: 'Rubik', sans-serif;
+                transition: .2s ease-in-out;
+                &:focus {
+                    border: 4px solid $borderColor;
+                }
+                }
+                textarea {
+                    width: 855px;
+                    height: 250px;
+                    min-height: 250px;
+                    margin-top: 25px;
+                    max-width: 855px;
+                    min-width: 855px;
+                    padding: 15px;
+                    font-family: 'Rubik', sans-serif;
+                    transition: .2s ease-in-out;
+                    &:focus {
+                        border: 4px solid $borderColor;
+                    }
+            }
+            .name {
+                transform: translateX(-100px);
+                opacity: 0;
+                transition: all .5s ease;
+                @include contactItems {
+                    width: 90%;
+                }
+            }
+
+            .phone {
+                transform: translateX(-200px);
+                @include contactItems {
+                    right: 20px;
+                    width: 90%;
+                    margin: unset;
+                    margin-top: 20px;
+                }
+              @extend .name;
+                margin-left: 50px;
+            }
+
+            .email {
+                width: 100%;
+                transform: translateX(-100px);
+                @include contactItems {
+                    width: 90%;
+                }
+                @extend .name;
+            }
+            .textarea {
+                transform: translateX(-100px);
+                opacity: 0;
+                transition: all .5s ease;
+                @include contactItems {
+                    width: 90%;
+                    max-width: 90%;
+                    min-width: 90%;
+                }
+            }
+
+            // smooth appear
+            .name-appear {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+
+            .phone-appear{
+             @extend .name-appear;
+            }
+            .email-appear {
+                @extend .name-appear;
+            }
+
+            .textarea-appear {
+                @extend .name-appear;
+              }
+            
+        }
+
+    
+           // smooth appear
+    .contact-contentap {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    }
+ 
+}
+
+
+.contact-extra {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    @include flexDisplay(row);
+    flex-wrap: wrap;
+    img {
+        padding: 10px;
+    }
+}

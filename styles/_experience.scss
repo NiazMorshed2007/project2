@@ -1,0 +1,159 @@
+#experience {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding-top: 70px;
+    .experience-wrapper {
+        width: 100%;
+        height: auto;
+        .experience-heading {
+            transform: translateY(-90px);
+            opacity: 0;
+            transition: all .5s ease;
+            text-align: center;
+            margin-top: 30px;
+            h1 {
+                @include header(900, 60px, auto, 20px, 0px);
+                @include experienceItems {
+                    @include header(900, 40px, auto, 20px, 0px);
+                }
+            }
+        }
+
+        .experience1 {
+            width: 100%;
+            height: auto;
+            margin-top: 100px;
+            margin-left: 70px;
+            @include experienceItems {
+                margin-left: 20px;
+            }
+            @include flexDisplay(row);
+            flex-wrap: wrap;
+            .experience1-content {
+                transform: translateX(-180px);
+                opacity: 0;
+                transition: all .7s ease-in-out;
+                padding-left: 50px;
+                width: 50%;
+                height: auto;
+                padding-right:40px;
+                @include experienceItems {
+                    padding-left:10px;
+                    width: 90%;
+                    height: auto;
+                    margin-bottom: 40px;
+                }
+                h2 {
+                    @include header(700, 30px, 30px, 20px, 20px);
+                }
+                p {
+                    line-height: 28px;
+                }
+            }
+
+            .experience1-img {
+                height: auto;
+                transform: translateX(400px);
+                opacity: 0;
+                transition: all .5s ease;
+                @include experienceItems {
+                    width: 100%;
+                    height: auto;
+                }
+                img {
+                    width: 600px;
+                    @include experienceItems{
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+
+            // smooth slide
+ 
+            .experience1-contap {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+
+            .experience1-imgap {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        .experience2 {
+            transform: translateY(50px);
+            opacity: 0;
+            transition: all .4s ease;
+            padding-right: 30px;
+           @extend .experience1;
+            @include flexDisplay(row);
+            flex-wrap: wrap;
+            .experience2-content {
+                transform: translateX(400px);
+                @extend .experience1-content;
+                padding-right:40px;
+            }
+
+            .experience2-img {
+                transform: translateX(-400px);
+               @extend .experience1-img;
+            }
+
+            // smooth appear
+            .experience2-imgap {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+
+            .experience2-contap {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+
+        .experience3 {
+           @extend .experience1;
+           margin-bottom: 20px;
+            .experience3-content {
+                @extend .experience1-content;
+                transform: translateX(-400px);
+            }
+
+            .experience3-img {
+                transform: translateY(-100px);
+                @extend .experience1-img;
+            }
+
+            
+            .experience3-imgap {
+                transform: translateY(0px);
+                opacity: 1;
+              }
+
+            .experience3-contap {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        // smooth appear
+        .experience2-appear {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+        
+
+        // smooth slide
+        .experience-headap {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+
+
+    }
+}

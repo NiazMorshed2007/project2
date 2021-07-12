@@ -1,0 +1,63 @@
+.statistic {
+    width: 100%;
+    height: auto;
+    padding: 70px;
+    background-color: $statisticBackground;
+    @include flexDisplay(row);
+    flex-wrap: wrap;
+    color: white;
+    font-weight: 900;
+    div {
+        margin-top: 20px;
+        padding: 10px;
+    }
+    .satisfied {
+        transform: translateX(200px);
+        opacity: 0;
+        transition: all .5s ease;
+    }
+
+    .total-project {
+        transform: translateX(-200px);
+        @extend .satisfied;
+    }
+
+    .work-completed {
+        transform: translateX(200px);
+        @extend .satisfied;
+    }
+
+    .work-completed2 {
+        transform: translateY(-200px);
+       @extend .satisfied;
+    }
+
+    .num {
+        margin-left: 10px;
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    
+    .word {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    // smooth appear
+.satisfied-appear {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.total-projectap {
+    @extend .satisfied-appear;
+}
+
+.work-completedap {
+    @extend .satisfied-appear;
+}
+
+.work-completed2ap {
+    @extend .satisfied-appear;
+}
+}

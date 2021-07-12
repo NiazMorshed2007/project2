@@ -1,0 +1,123 @@
+@import 'colors';
+@import 'mixins';
+
+// @mixin flexDisplay($flexDirection, $flexWrap) {
+//     display: flex;
+//     justify-content: space-around;
+//     $flexDirection: $flexDirection;
+//     $flexWrap: $flexWrap;
+// }
+
+.header {
+    width: 100%;
+    height: 67px;
+    padding: 30px;
+    position: sticky;
+    z-index: 100000000000000000;
+    @include flexDisplay(row);
+    @include navAppear {
+        position: fixed;
+        top: 0;
+        background-color: #6c6c6f;
+        z-index: 1000000000;
+    }
+    .logo {
+        width: 50%;
+        height: auto;
+    }
+    .links {
+        width: 50%;
+        height: auto;
+        .nav-links {
+            @include navAppear {
+                opacity: 1;
+                position: absolute;
+                left: 0px;
+                height: 500px;
+                top: 67px;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                transform: translateY(-120%);
+                transition: all 0.5s ease-in;
+            }
+        }
+        .nav-active{
+            transform: translateY(0%);
+            opacity: 1;
+        }
+        // @include navAppear {
+        //     display: none;
+        // }
+        ul {
+            list-style-type: none;
+            @include flexDisplay(row);
+        
+        li {
+            margin-left: 20px;
+            @include navAppear {
+                    margin-left: 0px;
+                    width: 100%;
+                    opacity: 0;
+                    padding: 20px;
+                    transition: .7s ease-in-out;
+                    &:hover {
+                        background-color: $deafultColor;
+                }
+            }
+            a {
+                color: $colorBlack;
+                font-weight: bold;
+                text-decoration: none;
+                transition: .5s ease-in-out;
+                &:hover {
+                    color: $paragraphColor;
+                }
+            }
+        }
+    }
+    }
+    .burger {
+        display: none;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        @include navAppear {
+            display: block;
+        }
+        div {
+            width: 25px;
+            height: 3px;
+            margin: 5px;
+            background-color: $navBackground;
+            transition: all .5s ease-in-out;
+        }
+        // @include navAppear {
+        //     display: block;
+        // }
+    }
+}
+
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}

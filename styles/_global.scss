@@ -1,0 +1,71 @@
+.btn {
+    width: 150px;
+    height: auto;
+    padding: 20px;
+    margin-top: 70px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    background-color: #ff7214;
+    color: white;
+    transition: .5s ease;
+    cursor: pointer;
+    &:hover {
+        background-color: white;
+        color: black;
+        box-shadow: 0px 0px 10px silver;
+    }
+}
+
+
+.learn-more {
+    margin-top: 40px;
+    cursor: pointer;
+    transition: .5s ease;
+    &:hover {
+        color: $paragraphColor;
+        font-size: 17px;
+    }
+}
+
+
+.comment-like {
+    display: flex;
+    padding-bottom: 15px;
+    i {
+        font-size: 15px;
+        padding-left: 10px;
+        @include boxWidth {
+            padding-left: 2px;
+        }
+        transition: .5s ease;
+        cursor: pointer;
+        &:hover {
+            color: $paragraphColor;
+        }
+        span {
+            color: #6c6c6f;
+            transition: .5s ease;
+            padding-left: 10px;
+            &:hover {
+                color: $paragraphColor;
+            }
+        }
+    }
+    .heart {
+        margin-left: 15px;
+        @include boxWidth {
+            margin-left: 10px;
+        }
+    }
+}
+
+
+
+.sponser {
+    width: auto;
+    height: auto;
+    border-radius: 0% !important;
+    margin-top: 10px;
+}

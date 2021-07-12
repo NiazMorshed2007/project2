@@ -1,0 +1,70 @@
+@import 'colors';
+@import 'mixins';
+
+#home {
+    width: auto;
+    height: auto;
+    margin: 80px;
+    padding-top: 60px;
+    margin-left: 20px;
+    margin-right: 10px;
+  @include flexDisplay(row);
+  @include homeItems {
+      flex-wrap: wrap-reverse;
+     text-align: center;
+  }
+    .home-content {
+        transform: translateX(-90px) rotate(45deg);
+        opacity: 0;
+        transition: all .5s ease;
+        width: 50%;
+        height: auto;
+        margin-left: 60px;
+        @include homeItems {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            margin-top: 40px;
+        }
+        h1 {
+            @include header(900, 60px, 70px, 20px, 20px);
+            @include homeItems {
+                @include header(900, 40px, 40px, 20px, 0px);
+            }
+            // font-size: 60px;
+        }
+    }
+
+    .home-image {
+        width: 50%;
+        height: auto;
+        @include homeItems {
+            width: 100%;
+            height: auto;
+        }
+        .hm-img {
+            transform: translateX(420px) rotate(20deg);
+            opacity: 0;
+            transition: .5s ease;
+            width: 450px;
+            height: 450px;
+            @include homeItems {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .home-imgap {
+            transform: translateX(0px) rotate(0deg);
+            opacity: 1;
+         }
+    }
+    .home-conap {
+        transform: translateX(0px) rotate(0deg);
+        opacity: 1;
+      }
+}
+
+
+
+
+  

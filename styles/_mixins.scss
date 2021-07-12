@@ -1,0 +1,16 @@
+@mixin flexDisplay($flexDirection) {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: $flexDirection;
+   
+}
+
+@mixin header($fontWeight, $fontSize,  $lineHeight, $marginBottom, $marginTop) {
+    color: $headingColor;
+    font-family: $headingFontFamily;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    margin-bottom: $marginBottom;
+    margin-top: $marginTop;
+}
